@@ -1,17 +1,26 @@
-from check_word import contains_word
+from is_factor import *
 
-def test_contains_word1():
-    assert contains_word("The quick brown fox", "quick") == True
+def test_factor1():
+    assert is_factor(1, 1) is True
 
-def test_contains_word2():
-    assert contains_word("The quick brown fox", "slow") == False
+def test_factor2():
+    assert is_factor(2, 10) is True
 
-def test_contains_word3():
-    assert contains_word("Hello world", "world") == True
+def test_factor3():
+    assert is_factor(-5, 25) is True
 
-def test_contains_word4():
-    assert contains_word("Hello world", "earth") == False
+def test_factor4():
+    assert is_factor(5, 0) is False
 
-def test_contains_word5():
-    assert contains_word("Python is fun", "Python") == True
+def test_factor5():
+    assert is_factor(0, 0) is False
+
+def test_factor6():
+    assert is_factor(2, 11) is False
+
+def test_factor7():
+    assert is_factor(10, 2) is False
+
+def test_factor8():
+    assert is_factor(0, 5) is False
 
